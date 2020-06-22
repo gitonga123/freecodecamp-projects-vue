@@ -9,7 +9,10 @@ new Vue({
         newQuote: function() {
             const num = Math.floor(Math.random() * quote_array.length)
             this.current_quote = quote_array[num];
-            this.show = this.show
+            this.show = !this.show
         }
+    },
+    updated() {
+        this.show = true
     },
 });
